@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import * as contentful from 'contentful'
 
 import NavBar from './components/NavBar'
 import {NavBarDesk} from './components/NavBarDesk';
@@ -9,7 +10,25 @@ import {Merch} from './components/Merch'
 import {Tickets} from './components/Tickets'
 import {AboutUs} from './components/AboutUs'
 
+
+
 export const App = (props) => {
+  let contentful= require ("contentful")
+  let client = contentful.createClient (
+      {
+          space: '5rgn7vd3jtfe' ,
+          accessToken: '5v8Y6-15fcM7Ms3jsvxX5MFzME1COBGrf7NZJJkY4lY'
+      }
+  )
+
+  client.getEntry(
+      '5rgn7vd3jtfe'
+  ).then(
+      (entry)=>{
+          console.log(entry)
+      }
+  )
+  
   return (
     <div className='body'> 
       <div className='logo-header-desktop'>
@@ -19,7 +38,11 @@ export const App = (props) => {
       </div>
       <NavBar />
       <NavBarDesk />
-    
+      <div className='entries'>
+        <p>api call test panel</p>
+        <h1>{}</h1>
+        
+      </div>
       <Switch>
         <Route exact path="/">
           <Home />

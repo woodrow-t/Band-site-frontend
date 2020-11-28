@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import {Link} from "react-router-dom";
 
-export default function NavBar (){
+export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
