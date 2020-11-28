@@ -1,0 +1,42 @@
+* {
+  border: solid;
+  border-width: 1px;
+  h1 {
+    color: blue;
+  }
+  .logo-header-desktop {
+    display: none;
+
+  }
+  .mobile-nav{
+    .logo {
+      img{
+        height: 100px;
+      }
+    }
+    .hamburger {
+      .navbar-toggler-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: 426px) {
+  .logo-header-desktop {
+    display: flex;
+    a { 
+      margin: auto;
+      img {
+        height: 150px;
+      }
+    }
+  }
+  .mobile-nav {
+    display: none!important;
+  }
+  .navbardesk {
+    display: flex!important;
+  }
+}
