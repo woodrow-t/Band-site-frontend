@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import * as contentful from 'contentful'
+import * as Contentful from 'contentful'
 
 import NavBar from './components/NavBar'
 import {NavBarDesk} from './components/NavBarDesk';
@@ -10,25 +10,29 @@ import {Merch} from './components/Merch'
 import {Tickets} from './components/Tickets'
 import {AboutUs} from './components/AboutUs'
 
+const client = Contentful.createClient({
+  space: '5rgn7vd3jtfe',
+  accessToken: '5v8Y6-15fcM7Ms3jsvxX5MFzME1COBGrf7NZJJkY4lY'
+})
 
 
-export const App = (props) => {
-  let contentful= require ("contentful")
-  let client = contentful.createClient (
-      {
-          space: '5rgn7vd3jtfe' ,
-          accessToken: '5v8Y6-15fcM7Ms3jsvxX5MFzME1COBGrf7NZJJkY4lY'
-      }
-  )
+function App() {
+  const[entries, setEntries] = useState([]);
 
-  client.getEntry(
-      '5rgn7vd3jtfe'
-  ).then(
-      (entry)=>{
-          console.log(entry)
-      }
-  )
+  useEffect(() => {
+    client.getEntries ({
+      'content_type': 'merchandise'
+    })
+    .then((response) => {
+      setEntries(response.items);
+    });
+  }, []);
   
+  const Entries =  entries.map((entry) => (
+    <div className='entry' key={entry.sys.id}>
+      {/* <p>{entry.fields.name}</p> */}
+    </div>
+  ))
   return (
     <div className='body'> 
       <div className='logo-header-desktop'>
@@ -40,8 +44,7 @@ export const App = (props) => {
       <NavBarDesk />
       <div className='entries'>
         <p>api call test panel</p>
-        <h1>{}</h1>
-        
+        <h1>{Entries}</h1> 
       </div>
       <Switch>
         <Route exact path="/">
@@ -63,3 +66,5 @@ export const App = (props) => {
     </div>
   );
 }
+
+export default App;

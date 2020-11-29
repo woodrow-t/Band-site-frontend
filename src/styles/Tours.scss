@@ -1,0 +1,15 @@
+.tours {
+
+    .entry {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 10px;
+        p{
+            display: flex;
+            text-align: center;
+            margin: auto;
+            max-width: 90%;
+        }
+    }
+}

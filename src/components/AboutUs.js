@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
+import * as Contentful from 'contentful'
 
 export const AboutUs = (props) => {
     return (
         <div className='about-us'>
-            <h1>Hello I'm About Us!</h1>
+            <h1>About the band</h1>
         </div>
     )
 }
