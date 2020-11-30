@@ -9,7 +9,7 @@ const client = Contentful.createClient({
 
 export const Tours = (props) => {
     const[entries, setEntries] = useState([]);
-
+    
     useEffect(() => {
         client.getEntries ({
         'content_type': 'tourDates'
@@ -19,17 +19,16 @@ export const Tours = (props) => {
         });
     }, []);
 
-    const Tours =  entries.map((entry) => (
+    const Tours = entries.map((entry) => (
         <div className='entry' key={entry.sys.id}>
-        <p>{entry.fields.name}</p>
+        <p>{entry.fields.title}</p>
         <p>{entry.fields.address}</p>
-        <p>{entry.fields.tourDates2021}</p>
-        {/*  */}
+        <p>{entry.fields.date}</p>
         </div>
     ))
     return (
         <div >
-            <h1>Tour Dates</h1>
+            <h1 className='title'>Tour Dates</h1>
             <div className='tours'>
                 {Tours}
             </div>

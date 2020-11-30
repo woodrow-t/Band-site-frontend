@@ -1,17 +1,23 @@
 * {
   // border: solid;
   // border-width: 1px;
+  
   body {
-    background-image: url('https://imgur.com/F53SiD2.jpg');
-    height: 100%;
+    // 
+    background: black;
+    background: linear-gradient(to bottom,rgba(0,0,0,.9)5%,transparent,rgba(0,0,0,1)105%), url('https://imgur.com/F53SiD2.jpg') no-repeat ;
+    background-size: cover;
     background-position-y: 100px;
     background-position-x: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  h1 {
+  
+  h1.title {
     color: white;
+    text-align: center;
   }
+
   p {
     color: white;
   }

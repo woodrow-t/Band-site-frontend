@@ -39,8 +39,8 @@ export const Merch = (props) => {
     ))
     return (
         <div className='merch'>
-            <h1>Metal Merch</h1>
-            <div className='entries'>
+            <h1 className='title'>Metal Merch</h1>
+            <div className='merch'>
                 {Merch}
             </div>
         </div>
