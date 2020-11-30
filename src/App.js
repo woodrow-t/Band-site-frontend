@@ -52,7 +52,7 @@ function App() {
       <NavBar />
       <NavBarDesk />
       <div className='entries'>
-        <p>api call test panel</p>
+      {/* API TEST AREA */}
         <h1>{Entries}</h1> 
       </div>
       <Switch>

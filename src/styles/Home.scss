@@ -1,0 +1,19 @@
+.home {
+    .tours-link {
+        margin: 10px;
+        text-align: center;
+        color: rgba(0, 0, 0, .7);
+        font-weight: bolder;
+    }
+    .adspace {
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        width: 90%;
+        max-width: 300px;
+        background-color: rgba(0, 0, 0, .7);
+        img {
+            width: 100%;
+        }
+    }
+}
