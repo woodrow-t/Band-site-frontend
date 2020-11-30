@@ -8,7 +8,7 @@ const client = Contentful.createClient({
 
 export const Merch = (props) => {
     const[entries, setEntries] = useState([]);
-
+    const[assets, setAssets] = useState([])
     useEffect(() => {
         client.getEntries ({
         'content_type': 'merchandise'
@@ -17,7 +17,18 @@ export const Merch = (props) => {
         setEntries(response.items);
         });
     }, []);
-  
+    
+    useEffect(() => {
+        client.getAsset ({
+        'content_type' : 'merchandise'
+        })
+        .then((response) => {
+        setAssets(response.fields.file.url)
+        });
+    }, [])
+
+    const Shirts = assets.map
+
     const Merch =  entries.map((entry) => (
         <div className='entry' key={entry.sys.id}>
         <p>{entry.fields.name}</p>

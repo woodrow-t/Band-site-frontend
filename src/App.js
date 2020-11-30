@@ -28,6 +28,15 @@ function App() {
     });
   }, []);
   
+  useEffect(() => {
+    client.getAsset ({
+      'content_type' : 'merchandise'
+    })
+    .then((response) => {
+      setEntries(response.img)
+    })
+  })
+
   const Entries =  entries.map((entry) => (
     <div className='entry' key={entry.sys.id}>
       {/* <p>{entry.fields.name}</p> */}
