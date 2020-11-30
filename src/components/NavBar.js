@@ -14,6 +14,7 @@ import {
   NavbarText
 } from 'reactstrap';
 import {Link} from "react-router-dom";
+import '../styles/NavBar.scss'
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function NavBar() {
 
   return (
     <div className='mobile-nav'>
-      <Navbar color="light" light expand="md">
+      <Navbar id= 'navbar' light expand="md">
         <Link to='/' className='logo'><img src='https://www.metalsucks.net/wp-content/uploads/2019/09/CUBLOTW-09_25_2019.jpg'></img></Link>
         <NavbarToggler className='hamburger' onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

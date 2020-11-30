@@ -1,5 +1,6 @@
 .navbardesk {
     display: none;
+    background-color: red;
     justify-content: space-evenly;
     border-color: orange;
     a {
@@ -7,6 +8,7 @@
         border-color: green ;
         p{
             margin: auto;
+            font-weight: bold;
         }
     }
 }

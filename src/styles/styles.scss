@@ -1,14 +1,24 @@
 * {
   // border: solid;
   // border-width: 1px;
+  body {
+    background-image: url('https://imgur.com/ifuLHXl.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
   h1 {
-    color: blue;
+    color: white;
+  }
+  p {
+    color: white;
   }
   .logo-header-desktop {
     display: none;
-
+    background-color: black;
   }
   .mobile-nav{
+    
     .logo {
       img{
         height: 100px;

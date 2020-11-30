@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as Contentful from 'contentful'
+import '../styles/Merch.scss'
 
 const client = Contentful.createClient({
   space: '5rgn7vd3jtfe',
@@ -18,14 +19,14 @@ export const Merch = (props) => {
         });
     }, []);
     
-    useEffect(() => {
-        client.getAsset ({
-        'content_type' : 'merchandise'
-        })
-        .then((response) => {
-        setAssets(response.fields.file.url)
-        });
-    }, [])
+    // useEffect(() => {
+    //     client.getAsset ({
+    //     'content_type' : 'merchandise'
+    //     })
+    //     .then((response)=> response.json())
+    //     .then((data)=>setAssets(data))
+    //     });
+    // }, [])
 
     const Shirts = assets.map
 
