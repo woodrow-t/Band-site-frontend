@@ -17,7 +17,7 @@ export const Item = (props) => {
         <div className='entry' >
             <p>{entry.fields.name}</p>
             <div className='product'>
-                <h3 className={clicked ? "clicked" : ""} >Price</h3>                
+                <h3 className={clicked ? "clicked" : ""} > ${entry.fields.price}</h3>                
                 <img onClick={handleClick} src={entry.fields.featuredImage.fields.file.url}  />
 
             </div>

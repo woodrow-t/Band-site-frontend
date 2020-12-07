@@ -10,7 +10,7 @@
                 width: 100%;
                 
                 .clicked {
-                    display: block!important; background-color:black;   
+                    display: block!important; background-color: rgba(0,0,0,.7);   
                 }
                 .product {
                     position: relative;
@@ -22,6 +22,7 @@
                         max-width: 100%;
                     }
                     h3 {
+                        color: white;
                         margin: auto;
                         text-align: center;
                         background-color: rgba(0,0,0,.7);
@@ -52,13 +53,8 @@
                 width: 200px;     
                 .product {
                     img {
-                        background-color: black;
                         max-height: 100px;
                         max-width: 100%;
-                    }
-                    h3 {
-                        text-align: center;
-                        background-color: rgba(0,0,0,.7);
                     }
                 }
             }
