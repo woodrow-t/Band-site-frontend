@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as Contentful from 'contentful'
+import {Item} from './Item'
 import '../styles/Merch.scss'
 
 const client = Contentful.createClient({
@@ -9,13 +10,13 @@ const client = Contentful.createClient({
 
 export const Merch = (props) => {
     const[entries, setEntries] = useState([]);
-    const[assets, setAssets] = useState([])
     useEffect(() => {
         client.getEntries ({
         'content_type': 'merchandise'
         })
         .then((response) => {
         setEntries(response.items);
+        console.log(response.items);
         });
     }, []);
     
@@ -23,19 +24,24 @@ export const Merch = (props) => {
     //     client.getAsset ({
     //     'content_type' : 'merchandise'
     //     })
-    //     .then((response)=> response.json())
+    //     .then((response)=> {response.json())
     //     .then((data)=>setAssets(data))
     //     });
     // }, [])
+    const [clicked, setClicked] = useState("");
 
-    const Shirts = assets.map
+    const handleClick = () => {
+    setClicked(!clicked);
+    };
 
     const Merch =  entries.map((entry) => (
-        <div className='entry' key={entry.sys.id}>
-        <p>{entry.fields.name}</p>
-            
-        <p>{entry.fields.description}</p>
-        </div>
+        // <div className='entry' key={entry.sys.id}>
+        // <p>{entry.fields.name}</p>
+        // <img onClick={handleClick} src={entry.fields.featuredImage.fields.file.url}  />
+        // <h3 className={clicked ? "clicked" : ""} >Price</h3>
+        // <p>{entry.fields.description}</p>
+        // </div>
+        <Item entry={entry} />
     ))
     return (
         <div className='merch'>
