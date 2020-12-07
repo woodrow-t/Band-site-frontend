@@ -10,6 +10,9 @@ export const Tickets = (props) => {
     return (
         <div className='tickets'>
             <h1 className='title'>Get your tickets today!</h1>
+            {/* <form >
+                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+            </form> */}
         </div>
     )
 }

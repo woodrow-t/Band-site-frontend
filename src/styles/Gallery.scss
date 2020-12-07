@@ -1,0 +1,25 @@
+.gallery {
+    background-color: rgba(0,0,0,.7);
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    max-width: fit-content;
+    img {
+        margin: auto;
+        padding: 10px;
+        max-width: 100%; 
+        border-radius: 20px;
+    }
+}
+@media (min-width: 426px) {
+    .gallery {
+        width: 70%;
+        img {
+            max-height: 350px;
+            
+        }
+    }
+}

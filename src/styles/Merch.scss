@@ -1,5 +1,7 @@
     .merch {
         .merch {
+            display: flex;
+            flex-wrap: wrap;
             background-color: rgba(0,0,0,.7);
             width: 90%;
             max-width: 1000px;
@@ -8,7 +10,7 @@
             .entry {    
                 text-align: center;
                 width: 100%;
-                
+                padding: 10px;
                 .clicked {
                     display: block!important; background-color: rgba(0,0,0,.7);   
                 }
@@ -20,6 +22,10 @@
                     img {
                         display: relative;
                         max-width: 100%;
+                        border-radius: 10px;
+                        &:active {
+                            box-shadow: 0px 0px 5px red;
+                        }
                     }
                     h3 {
                         color: white;
@@ -34,6 +40,9 @@
                 }
                 #description {
                     display: none;
+                    padding: 5px;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
                 }                
             }
         }
@@ -53,8 +62,7 @@
                 width: 200px;     
                 .product {
                     img {
-                        max-height: 100px;
-                        max-width: 100%;
+                        max-height: 275px;
                     }
                 }
             }

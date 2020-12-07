@@ -42,7 +42,10 @@ export default function NavBar() {
                   <Link to='/merch'>Merch</Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link to='/aboutus'> About Us</Link>
+                  <Link to='/aboutus'>About Us</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to='/gallery'>Gallery</Link>
                 </DropdownItem>
             </UncontrolledDropdown>
           </Nav>

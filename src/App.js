@@ -9,6 +9,7 @@ import {Tours} from './components/Tours'
 import {Merch} from './components/Merch'
 import {Tickets} from './components/Tickets'
 import {AboutUs} from './components/AboutUs'
+import {Gallery} from './components/Gallery'
 
 const client = Contentful.createClient({
   space: '5rgn7vd3jtfe',
@@ -70,6 +71,9 @@ function App() {
         </Route>
         <Route exact path="/aboutus">
           <AboutUs />
+        </Route>
+        <Route exact path="/gallery">
+          <Gallery />
         </Route>
       </Switch>
     </div>
