@@ -35,12 +35,6 @@ export const Merch = (props) => {
     };
 
     const Merch =  entries.map((entry) => (
-        // <div className='entry' key={entry.sys.id}>
-        // <p>{entry.fields.name}</p>
-        // <img onClick={handleClick} src={entry.fields.featuredImage.fields.file.url}  />
-        // <h3 className={clicked ? "clicked" : ""} >Price</h3>
-        // <p>{entry.fields.description}</p>
-        // </div>
         <Item entry={entry} />
     ))
     return (

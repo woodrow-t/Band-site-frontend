@@ -7,24 +7,33 @@
             padding: 10px;
             .entry {    
                 text-align: center;
+                width: 100%;
+                
+                .clicked {
+                    display: block!important; background-color:black;   
+                }
                 .product {
+                    position: relative;
+                    .clicked {
+                        display: block!important;
+                    }
                     img {
+                        display: relative;
                         max-width: 100%;
                     }
                     h3 {
                         margin: auto;
                         text-align: center;
                         background-color: rgba(0,0,0,.7);
-                        position: relative;
+                        display: none;
+                        position: absolute;
+                        width: 100%;
                         bottom: 0;
                     }
                 }
-                .clicked {
-                    display: block;
-                }
-                h3 {
+                #description {
                     display: none;
-                }
+                }                
             }
         }
 
@@ -51,12 +60,6 @@
                         text-align: center;
                         background-color: rgba(0,0,0,.7);
                     }
-                }
-                .clicked {
-                    display: block;
-                }
-                h3 {
-                    display: none;
                 }
             }
         }

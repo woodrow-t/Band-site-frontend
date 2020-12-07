@@ -1,19 +1,18 @@
 .mobile-nav {
+    text-align: center;
     #navbar {
         background-color: black;
         button.hamburger{
             background-color: gray;
-            
         }
-        .collapse {
-            text-align: center;
+        .collapse {   
             background-color: black;
             .dropdown-item {
                 &:hover {
                     background-color: red;
                 }
             }
-           a {
+            a {
                color: white;
             }
         }

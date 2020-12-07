@@ -16,11 +16,14 @@ export const Item = (props) => {
     return (
         <div className='entry' >
             <p>{entry.fields.name}</p>
-                <div className='product'>
-                    <img onClick={handleClick} src={entry.fields.featuredImage.fields.file.url}  />
-                    <h3 className={clicked ? "clicked" : ""} >Price</h3>
-                </div>
-            <p>{entry.fields.description}</p>
+            <div className='product'>
+                <h3 className={clicked ? "clicked" : ""} >Price</h3>                
+                <img onClick={handleClick} src={entry.fields.featuredImage.fields.file.url}  />
+
+            </div>
+            <div id='description' className={clicked ? "clicked" : ""} >       
+                <p >{entry.fields.description}</p>
+            </div>
         </div>
     )
 }
